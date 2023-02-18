@@ -1,0 +1,145 @@
+<h2> Learning Language as AI </h2>
+
+通过基本词汇的维基百科组成语料，供以学习语言和百科。  </br>
+当前只发布英语版。  </br>
+
+<h3> 背景 </h3>
+通常说的词汇量是指词干数量。有的研究表明认识98%的文本才能基本理解句意。然而统计发现十万词（非词干）不足以覆盖英语98%。AI模型通常2^15=32768词表便已足够。所以尝试人类按照AI模型训练的办法学习。</br>
+筛选基本词汇，构建百科语料，学会语言和百科知识。</br>
+本文中的词UnicodeTokenizer分词后的词，变形基本是小写化，不包括词干化。</br>
+定义词汇等级=-lg(词频)  </br>
+
+<h3> 语料 </h2>
+    维基百科(https://en.wikipedia.org/wiki/Ai)   </br>
+    BookCorpus(https://github.com/soskek/bookcorpus)    </br>
+    arxiv abstract(https://www.kaggle.com/datasets/Cornell-University/arxiv)    </br>
+    词典ecdict(https://github.com/skywind3000/ECDICT)    </br>
+
+<h3> 依赖工具 </h3>
+    Wiki2txt(https://github.com/laohur/wiki2txt) :wikipedia解析器    </br>
+    UnicodeTokenizer(https://github.com/laohur/UnicodeTokenizer):分词器    </br>
+
+<h3>词表</h3></h3>
+等级五内,7k，覆盖87.4%; 等级六内,33k，覆盖95.2%  </br>
+某些测试称需要几千词汇，是指圈定的几千词干。本项目的此表是频率筛选的绝对词表。  </br>
+<a href="freq.html">词频表</a>  统计词频至6级，约3.2万词   </br>
+
+<h3>产出</h3>
+术语筛选策略 ：标题纯英文单词、且六级词汇以内、有合适释文。   </br>
+产出2197个条目，词频降序。每24篇合一章,共约一百章。每篇解释一个术语，术语标题、释文、单词释义。   </br>
+正文包含五级词汇:7103、六级词汇:17540、六级之外的生僻词:15474，覆盖92%词频。正文全长63万词。    </br>
+
+<h3>排版样例</h3>
+只释义首句
+<h2> <a href=https://en.wikipedia.org/wiki/Quantum>Quantum</a> </h2>
+<p>In physics, a quantum (plural quanta) is the minimum amount of any physical entity (physical property) involved in an interaction. 　The fundamental notion that a physical property can be "quantized" is referred to as "the hypothesis of quantization". 　This means that the magnitude of the physical property can take on only discrete values consisting of integer multiples of one quantum. 　For example, a photon is a single quantum of light (or of any other form of electromagnetic radiation). 　Similarly, the energy of an electron bound within an atom is quantized and can exist only in certain discrete values. 　(Atoms and matter in general are stable because electrons can exist only at discrete energy levels within an atom.) 　Quantization is one of the foundations of the much broader physics of quantum mechanics. 　Quantization of energy and its influence on how energy and matter interact (quantum electrodynamics) is part of the fundamental framework for understanding and describing nature.</p>
+<table style='font-size: 14px'>
+<tr><th>word</th><th>phonetic</th><th>definition</th><th>translation</th><th>root</th><th>lemma</th><th>degre</th></tr>
+<tr><td><b>quantum</b></td><td>'kwɒntәm</td><td>n. a discrete amount of something that is analogous to the quantities in quantum theory<br>n. (physics) the smallest discrete quantity of some physical property that a system can possess (according to quantum theory)</td><td><a href=https://en.wikipedia.org/wiki/quantum>n. 量, 量子<br>[计] 量子</a></td><td></td><td></td><td>3.93</td></tr>
+<tr><td><b>quanta</b></td><td>'kwɒntә</td><td>n a discrete amount of something that is analogous to the quantities in quantum theory<br>n (physics) the smallest discrete quantity of some physical property that a system can possess (according to quantum theory)</td><td><a href=https://en.wikipedia.org/wiki/quanta>pl. 量, 量子<br>[医] 量子, 量</a></td><td></td><td>quantum</td><td>6.13</td></tr>
+<tr><td><b>minimum</b></td><td>'minimәm</td><td>n. the smallest possible quantity<br>n. the point on a curve where the tangent changes from negative on the left to positive on the right</td><td><a href=https://en.wikipedia.org/wiki/minimum>a. 最小的, 最低的<br>n. 最小值<br>[计] 最小值</a></td><td>min</td><td></td><td>4.51</td></tr>
+</table>
+<br
+</h3>
+
+
+<h3>用法</h3>
+翻阅各篇看术语，确定自己词汇量，从不会的开始。  </br>
+每篇文章可以只看首句。    </br>
+蓝字含扩展链接。   </br>
+
+
+<h3>索引</h3>
+<h2> Learning Language as AI </h2>
+<a href=pages/000.html>Section 000</a><br>
+<a href=pages/001.html>Section 001</a><br>
+<a href=pages/002.html>Section 002</a><br>
+<a href=pages/003.html>Section 003</a><br>
+<a href=pages/004.html>Section 004</a><br>
+<a href=pages/005.html>Section 005</a><br>
+<a href=pages/006.html>Section 006</a><br>
+<a href=pages/007.html>Section 007</a><br>
+<a href=pages/008.html>Section 008</a><br>
+<a href=pages/009.html>Section 009</a><br>
+<a href=pages/010.html>Section 010</a><br>
+<a href=pages/011.html>Section 011</a><br>
+<a href=pages/012.html>Section 012</a><br>
+<a href=pages/013.html>Section 013</a><br>
+<a href=pages/014.html>Section 014</a><br>
+<a href=pages/015.html>Section 015</a><br>
+<a href=pages/016.html>Section 016</a><br>
+<a href=pages/017.html>Section 017</a><br>
+<a href=pages/018.html>Section 018</a><br>
+<a href=pages/019.html>Section 019</a><br>
+<a href=pages/020.html>Section 020</a><br>
+<a href=pages/021.html>Section 021</a><br>
+<a href=pages/022.html>Section 022</a><br>
+<a href=pages/023.html>Section 023</a><br>
+<a href=pages/024.html>Section 024</a><br>
+<a href=pages/025.html>Section 025</a><br>
+<a href=pages/026.html>Section 026</a><br>
+<a href=pages/027.html>Section 027</a><br>
+<a href=pages/028.html>Section 028</a><br>
+<a href=pages/029.html>Section 029</a><br>
+<a href=pages/030.html>Section 030</a><br>
+<a href=pages/031.html>Section 031</a><br>
+<a href=pages/032.html>Section 032</a><br>
+<a href=pages/033.html>Section 033</a><br>
+<a href=pages/034.html>Section 034</a><br>
+<a href=pages/035.html>Section 035</a><br>
+<a href=pages/036.html>Section 036</a><br>
+<a href=pages/037.html>Section 037</a><br>
+<a href=pages/038.html>Section 038</a><br>
+<a href=pages/039.html>Section 039</a><br>
+<a href=pages/040.html>Section 040</a><br>
+<a href=pages/041.html>Section 041</a><br>
+<a href=pages/042.html>Section 042</a><br>
+<a href=pages/043.html>Section 043</a><br>
+<a href=pages/044.html>Section 044</a><br>
+<a href=pages/045.html>Section 045</a><br>
+<a href=pages/046.html>Section 046</a><br>
+<a href=pages/047.html>Section 047</a><br>
+<a href=pages/048.html>Section 048</a><br>
+<a href=pages/049.html>Section 049</a><br>
+<a href=pages/050.html>Section 050</a><br>
+<a href=pages/051.html>Section 051</a><br>
+<a href=pages/052.html>Section 052</a><br>
+<a href=pages/053.html>Section 053</a><br>
+<a href=pages/054.html>Section 054</a><br>
+<a href=pages/055.html>Section 055</a><br>
+<a href=pages/056.html>Section 056</a><br>
+<a href=pages/057.html>Section 057</a><br>
+<a href=pages/058.html>Section 058</a><br>
+<a href=pages/059.html>Section 059</a><br>
+<a href=pages/060.html>Section 060</a><br>
+<a href=pages/061.html>Section 061</a><br>
+<a href=pages/062.html>Section 062</a><br>
+<a href=pages/063.html>Section 063</a><br>
+<a href=pages/064.html>Section 064</a><br>
+<a href=pages/065.html>Section 065</a><br>
+<a href=pages/066.html>Section 066</a><br>
+<a href=pages/067.html>Section 067</a><br>
+<a href=pages/068.html>Section 068</a><br>
+<a href=pages/069.html>Section 069</a><br>
+<a href=pages/070.html>Section 070</a><br>
+<a href=pages/071.html>Section 071</a><br>
+<a href=pages/072.html>Section 072</a><br>
+<a href=pages/073.html>Section 073</a><br>
+<a href=pages/074.html>Section 074</a><br>
+<a href=pages/075.html>Section 075</a><br>
+<a href=pages/076.html>Section 076</a><br>
+<a href=pages/077.html>Section 077</a><br>
+<a href=pages/078.html>Section 078</a><br>
+<a href=pages/079.html>Section 079</a><br>
+<a href=pages/080.html>Section 080</a><br>
+<a href=pages/081.html>Section 081</a><br>
+<a href=pages/082.html>Section 082</a><br>
+<a href=pages/083.html>Section 083</a><br>
+<a href=pages/084.html>Section 084</a><br>
+<a href=pages/085.html>Section 085</a><br>
+<a href=pages/086.html>Section 086</a><br>
+<a href=pages/087.html>Section 087</a><br>
+<a href=pages/088.html>Section 088</a><br>
+<a href=pages/089.html>Section 089</a><br>
+<a href=pages/090.html>Section 090</a><br>
+<a href=pages/091.html>Section 091</a><br>
